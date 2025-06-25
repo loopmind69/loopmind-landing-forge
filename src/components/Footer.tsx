@@ -2,15 +2,23 @@
 import { MessageCircle, Linkedin } from 'lucide-react';
 
 const Footer = () => {
+  const policyContent = {
+    'About Us': 'LoopMind is a cutting-edge AI automation company specializing in intelligent business solutions. We transform how businesses operate through advanced chatbots, voice assistants, and custom automation workflows.',
+    'Terms & Conditions': 'By using our services, you agree to our terms. All AI solutions are provided as-is with ongoing support. Custom development projects require signed agreements with specific deliverables and timelines.',
+    'Privacy Policy': 'We protect your data with enterprise-grade security. Customer conversations and business data are encrypted and never shared with third parties. AI training uses anonymized data only.',
+    'Refund Policy': 'Custom development projects: 50% refund if cancelled within 48 hours of agreement. Subscription services: Pro-rated refunds available within 30 days of cancellation request.',
+    'Cancellation Policy': 'Services can be cancelled anytime with 30-day notice. Custom projects in development require completion of current milestone before cancellation takes effect.'
+  };
+
   const footerLinks = [
     {
       title: 'Company',
       links: [
-        { name: 'About Us', href: '#' },
-        { name: 'Terms & Conditions', href: '#' },
-        { name: 'Privacy Policy', href: '#' },
-        { name: 'Refund Policy', href: '#' },
-        { name: 'Cancellation Policy', href: '#' }
+        { name: 'About Us', href: '#', content: policyContent['About Us'] },
+        { name: 'Terms & Conditions', href: '#', content: policyContent['Terms & Conditions'] },
+        { name: 'Privacy Policy', href: '#', content: policyContent['Privacy Policy'] },
+        { name: 'Refund Policy', href: '#', content: policyContent['Refund Policy'] },
+        { name: 'Cancellation Policy', href: '#', content: policyContent['Cancellation Policy'] }
       ]
     }
   ];
@@ -51,7 +59,7 @@ const Footer = () => {
                 href="https://wa.me/+917905538458" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-10 h-10 rounded-full whatsapp-gradient hover:opacity-90 transition-opacity"
+                className="flex items-center justify-center w-10 h-10 rounded-full theme-gradient hover:opacity-90 transition-opacity"
               >
                 <MessageCircle className="h-5 w-5 text-white" />
               </a>
@@ -66,7 +74,8 @@ const Footer = () => {
                 <li key={index}>
                   <a 
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors group"
+                    title={link.content}
                   >
                     {link.name}
                   </a>
@@ -83,7 +92,7 @@ const Footer = () => {
                 href="https://wa.me/+917905538458" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-3 whatsapp-gradient text-white px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
+                className="inline-flex items-center space-x-3 theme-gradient text-white px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
               >
                 <MessageCircle className="h-5 w-5" />
                 <span>Chat on WhatsApp</span>

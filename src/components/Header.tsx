@@ -9,7 +9,7 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass-card">
+    <header className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-gray-700/50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -45,7 +45,7 @@ const Header = () => {
               href="https://wa.me/+917905538458" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="whatsapp-gradient text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:opacity-90 transition-opacity"
+              className="theme-gradient text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:opacity-90 transition-opacity"
             >
               <MessageCircle className="h-4 w-4" />
               <span>Contact</span>
@@ -89,7 +89,7 @@ const Header = () => {
                 href="https://wa.me/+917905538458" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="whatsapp-gradient text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:opacity-90 transition-opacity w-fit"
+                className="theme-gradient text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:opacity-90 transition-opacity w-fit"
               >
                 <MessageCircle className="h-4 w-4" />
                 <span>Contact</span>

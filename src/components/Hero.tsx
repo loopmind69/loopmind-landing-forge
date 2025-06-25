@@ -2,14 +2,13 @@
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20"></div>
-      
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse-glow"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="floating-orb w-72 h-72 top-20 left-10"></div>
+        <div className="floating-orb w-96 h-96 bottom-20 right-10" style={{ animationDelay: '-2s' }}></div>
+        <div className="floating-orb w-80 h-80 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" style={{ animationDelay: '-4s' }}></div>
+        <div className="floating-orb w-64 h-64 top-32 right-1/4" style={{ animationDelay: '-1s' }}></div>
+        <div className="floating-orb w-48 h-48 bottom-32 left-1/4" style={{ animationDelay: '-5s' }}></div>
       </div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
@@ -19,7 +18,7 @@ const Hero = () => {
             <img 
               src="/lovable-uploads/43998ece-6ec9-4e4a-9898-e140a72c496b.png" 
               alt="LoopMind"
-              className="h-24 w-auto mx-auto mb-6"
+              className="h-24 w-auto mx-auto mb-6 drop-shadow-2xl"
             />
           </div>
 
@@ -34,7 +33,7 @@ const Hero = () => {
               href="https://wa.me/+917905538458" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-3 whatsapp-gradient text-white px-8 py-4 rounded-xl text-lg font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center space-x-3 theme-gradient text-white px-8 py-4 rounded-xl text-lg font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               <span>Start Your AI Journey</span>
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
